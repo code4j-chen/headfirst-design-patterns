@@ -3,5 +3,5 @@ package com.code4j.pizza.abstractfactory;
 /**
  * Created by code4j on 2015/1/14.
  */
-public class MarinaraSauce extends Sauce {
+public class MarinaraSauce implements Sauce {
 }
