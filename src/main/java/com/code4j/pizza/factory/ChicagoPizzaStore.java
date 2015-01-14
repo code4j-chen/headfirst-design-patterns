@@ -7,7 +7,7 @@ import com.code4j.pizza.Pizza;
  */
 public class ChicagoPizzaStore extends PizzaStore {
     @Override
-    Pizza createPizza(String type) {
+    protected Pizza createPizza(String type) {
         Pizza pizza = null;
         if (type.equals("cheese")) {
             pizza = new ChicagoStyleCheesePizza();
