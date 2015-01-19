@@ -5,4 +5,6 @@ package com.code4j.remotecontrol;
  */
 public interface Command {
     public void execute();
+
+    public void undo();
 }
