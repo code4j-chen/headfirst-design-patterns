@@ -5,17 +5,17 @@ import com.code4j.remotecontrol.Command;
 /**
  * Created by code4j on 2015/1/19.
  */
-public class CeilingFanOffCommand implements Command {
+public class CeilingFanMediumCommand implements Command {
     CeilingFan ceilingFan;
     int prevSpeed;
-    public CeilingFanOffCommand(CeilingFan ceilingFan) {
+    public CeilingFanMediumCommand(CeilingFan ceilingFan) {
         this.ceilingFan = ceilingFan;
     }
 
     @Override
     public void execute() {
         prevSpeed = ceilingFan.getSpeed();
-        ceilingFan.off();
+        ceilingFan.medium();
     }
 
     @Override
