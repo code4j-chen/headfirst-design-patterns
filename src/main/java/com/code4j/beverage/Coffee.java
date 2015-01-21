@@ -3,27 +3,16 @@ package com.code4j.beverage;
 /**
  * Created by code4j on 2015/1/21.
  */
-public class Coffee {
-    void prepareRecipe() {
-        boilWater();
-        brewCoffeeGrinds();
-        pourInCup();
-        addSugarAndMilk();
-    }
+public class Coffee extends CaffeineBeverage{
 
-    private void addSugarAndMilk() {
+    @Override
+    protected void addCondiments() {
         System.out.println("Adding Sugar and Milk");
     }
 
-    private void pourInCup() {
-        System.out.println("Pouring into cup");
-    }
-
-    private void brewCoffeeGrinds() {
+    @Override
+    protected void brew() {
         System.out.println("Dripping Coffee through filter");
     }
 
-    private void boilWater() {
-        System.out.println("Boiling water");
-    }
 }

@@ -3,26 +3,14 @@ package com.code4j.beverage;
 /**
  * Created by code4j on 2015/1/21.
  */
-public class Tea {
-    void prepareRecipe() {
-        boilWater();
-        steepTeaBag();
-        pourInCup();
-        addLemon();
-    }
-
-    private void addLemon() {
+public class Tea extends CaffeineBeverage{
+    @Override
+    public void addCondiments() {
         System.out.println("Adding Lemon");
     }
 
-    private void steepTeaBag() {
+    @Override
+    public void brew() {
         System.out.println("Steeping the tea");
-    }
-
-    private void boilWater() {
-        System.out.println("Boiling water");
-    }
-    private void pourInCup() {
-        System.out.println("Pouring into cup");
     }
 }
