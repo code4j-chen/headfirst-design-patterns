@@ -1,4 +1,4 @@
-package com.code4j.starbuzz;
+package com.code4j.beverage;
 
 /**
  * Created by code4j on 2015/1/21.
