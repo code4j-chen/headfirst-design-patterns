@@ -1,11 +1,11 @@
 package com.code4j.restaurant;
 
 import java.util.ArrayList;
-
+import java.util.Iterator;
 /**
  * Created by code4j on 2015/1/22.
  */
-public class PancakeHouseMenu {
+public class PancakeHouseMenu implements Menu{
     ArrayList menuList;
 
     public PancakeHouseMenu() {
@@ -23,6 +23,8 @@ public class PancakeHouseMenu {
         return menuList;
     }*/
     public Iterator<MenuItem> createIterator() {
-        return new PancakeHouseMenuIterator(this.menuList);
+//        return new PancakeHouseMenuIterator(this.menuList);
+        return menuList.iterator();
     }
+
 }

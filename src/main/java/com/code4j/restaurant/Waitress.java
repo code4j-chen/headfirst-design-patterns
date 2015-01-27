@@ -1,13 +1,14 @@
 package com.code4j.restaurant;
 
+import java.util.Iterator;
 /**
  * Created by code4j on 2015/1/26.
  */
 public class Waitress {
-    PancakeHouseMenu pancakeHouseMenu;
-    DinerMenu dinerMenu;
+    Menu pancakeHouseMenu;
+    Menu dinerMenu;
 
-    public Waitress(PancakeHouseMenu pancakeHouseMenu, DinerMenu dinerMenu) {
+    public Waitress(Menu pancakeHouseMenu, Menu dinerMenu) {
         this.pancakeHouseMenu = pancakeHouseMenu;
         this.dinerMenu = dinerMenu;
     }
@@ -17,6 +18,8 @@ public class Waitress {
         Iterator<MenuItem> iterator1 = dinerMenu.createIterator();
         System.out.println("MENU\n----\nBREAKFAST");
         printMenu(iterator);
+        System.out.println("\nLUNCH");
+        printMenu(iterator1);
     }
 
     private void printMenu(Iterator<MenuItem> iterator) {

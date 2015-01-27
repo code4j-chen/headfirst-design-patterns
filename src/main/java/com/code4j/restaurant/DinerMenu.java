@@ -1,9 +1,9 @@
 package com.code4j.restaurant;
-
+import java.util.Iterator;
 /**
  * Created by code4j on 2015/1/22.
  */
-public class DinerMenu {
+public class DinerMenu implements Menu{
     static final int MAX_ITEMS = 6;
     int numberOfItems = 0;
     MenuItem[] menuItems;
