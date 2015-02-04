@@ -1,30 +1,23 @@
 package com.code4j.restaurant;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 /**
  * Created by code4j on 2015/1/26.
  */
 public class Waitress {
-    Menu pancakeHouseMenu;
-    Menu dinerMenu;
-    Menu cafeMenu;
+    ArrayList<Menu> menus;
 
-    public Waitress(Menu pancakeHouseMenu, Menu dinerMenu, Menu cafeMenu) {
-        this.pancakeHouseMenu = pancakeHouseMenu;
-        this.dinerMenu = dinerMenu;
-        this.cafeMenu = cafeMenu;
+    public Waitress(ArrayList<Menu> menus) {
+        this.menus = menus;
     }
 
     public void printMenu() {
-        Iterator<MenuItem> iterator = pancakeHouseMenu.createIterator();
-        Iterator<MenuItem> iterator1 = dinerMenu.createIterator();
-        Iterator iterator2 = cafeMenu.createIterator();
-        System.out.println("MENU\n----\nBREAKFAST");
-        printMenu(iterator);
-        System.out.println("\nLUNCH");
-        printMenu(iterator1);
-        System.out.println("\nDINNER");
-        printMenu(iterator2);
+        Iterator<Menu> menuIterator = menus.iterator();
+        while (menuIterator.hasNext()) {
+            Menu menu = menuIterator.next();
+            printMenu(menu.createIterator());
+        }
     }
 
     private void printMenu(Iterator<MenuItem> iterator) {
