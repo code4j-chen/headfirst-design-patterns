@@ -3,7 +3,7 @@ package com.code4j.restaurant;
 /**
  * Created by code4j on 2015/1/22.
  */
-public class MenuItem {
+public class MenuItem extends MenuComponent{
     String name;
     String description;
     boolean vegetarian;//素
@@ -16,19 +16,33 @@ public class MenuItem {
         this.price = price;
     }
 
+    @Override
     public String getName() {
         return name;
     }
 
+    @Override
     public String getDescription() {
         return description;
     }
 
+    @Override
     public boolean isVegetarian() {
         return vegetarian;
     }
 
+    @Override
     public double getPrice() {
         return price;
+    }
+
+    @Override
+    public void print() {
+        System.out.print(" " + getName());
+        if (isVegetarian()) {
+            System.out.print("(v)");
+        }
+        System.out.println(", " + getPrice());
+        System.out.println("  --" + getDescription());
     }
 }
